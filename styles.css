@@ -247,3 +247,12 @@ label .en-sub,legend .en-sub{display:inline;margin-left:.3rem;font-weight:400}
   .gallery .photo.wide img{aspect-ratio:3/2;height:auto;min-height:0}
 }
 @media (max-width:600px){ .credentials{grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem} }
+
+/* ---------- Fish mark (小魚兒) replaces the red seal ---------- */
+.seal.fish{background:none;width:5.6rem;height:auto;border-radius:0;transform:rotate(-8deg);margin-top:.6rem}
+.seal.fish svg{display:block;width:100%;height:auto;fill:var(--seal)}
+@media (prefers-reduced-motion:no-preference){
+  .seal.fish{animation:swim 4s ease-in-out infinite}
+  @keyframes swim{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-4deg) translateY(-4px)}}
+}
+@media (max-width:600px){ .seal.fish{width:3.2rem;margin-top:0;transform:rotate(-6deg)} }
