@@ -220,3 +220,30 @@ html[lang="zh-Hant"] h1 [lang="en"],html[lang="zh-Hant"] h2 [lang="en"],html[lan
 label .en-sub,legend .en-sub{display:inline;margin-left:.3rem;font-weight:400}
 .schools .en-p,.schools .en-sub{color:color-mix(in srgb, var(--paper) 72%, transparent)}
 .hero .en-sub{color:var(--hero-muted)}
+
+/* ---------- Photos ---------- */
+.hero{background:
+  linear-gradient(100deg, color-mix(in srgb, var(--hero-bg) 88%, transparent) 0%, color-mix(in srgb, var(--hero-bg) 55%, transparent) 50%, color-mix(in srgb, var(--hero-bg) 10%, transparent) 100%),
+  url("photos/scenery/taroko-coast.jpg") center 60% / cover no-repeat,
+  var(--hero-bg)}
+.ridges{opacity:.92}
+.photo{margin:0;display:grid;gap:.45rem;min-width:0}
+.photo img{display:block;width:100%;height:auto;max-width:100%;border-radius:10px;object-fit:cover;background:var(--paper-2)}
+.photo figcaption{font-size:.82rem;color:var(--muted);line-height:1.5}
+.photo figcaption [lang="en"]{display:block}
+.stop-photo img{aspect-ratio:3/2}
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem}
+.gallery .photo img{aspect-ratio:4/5}
+.gallery .photo.wide img{aspect-ratio:auto;height:100%;min-height:100%}
+.recog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1.5rem}
+.recog-grid a{text-decoration:none;color:inherit;display:block}
+.recog-grid img{aspect-ratio:4/3;border:1px solid var(--line)}
+.recog-grid figcaption b{display:block;color:var(--ink);font-weight:600;font-size:.92rem}
+.credentials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin-top:.5rem}
+.credentials img{aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line)}
+@media (max-width:860px){
+  .gallery{grid-template-columns:1fr 1fr}
+  .gallery .photo.wide{grid-column:1/-1}
+  .gallery .photo.wide img{aspect-ratio:3/2;height:auto;min-height:0}
+}
+@media (max-width:600px){ .credentials{grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem} }
