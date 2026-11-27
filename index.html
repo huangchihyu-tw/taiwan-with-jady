@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Taiwan with Jady | Jady 帶路</title>
+<meta name="description" content="Private journeys and school study trips in Taiwan: tea, Indigenous culture and nature, food, craft and Mandarin immersion, guided by Jady.">
+<meta property="og:title" content="Taiwan with Jady | Jady 帶路">
+<meta property="og:description" content="Discover Taiwan’s culture and natural beauty through stories that connect us across languages.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Noto+Serif+TC:wght@500;700;900&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: an indigo-dyed mountain hero, then the page walks a dashed trail from city lanes to mountain tea gardens; each stop is a theme. */
+:root{
+  --paper:#EDF1EC;      /* mountain mist, faint tea-green bias */
+  --paper-2:#E2E8E1;
+  --card:#F7F9F5;
+  --ink:#18262B;
+  --muted:#4F5F5E;
+  --line:#C3CDC4;
+  --indigo:#23395B;     /* 藍染 indigo */
+  --tea:#5E7330;        /* oolong leaf */
+  --seal:#A8372A;       /* name-seal red, used only for the seal */
+  --hero-bg:#22385A;
+  --hero-fg:#F2F4EE;
+  --hero-muted:#BCC8D6;
+  --ridge-1:#2C4670;
+  --ridge-2:#355381;
+  --ridge-3:#1A2C47;
+  --btn-bg:#F2F4EE;
+  --btn-fg:#1A2C47;
+  --focus:#C99A3B;
+
+  --f-display:"Young Serif", "Iowan Old Style", Georgia, serif;
+  --f-han:"Noto Serif TC", "Songti TC", "PMingLiU", serif;
+  --f-body:"Figtree", "Helvetica Neue", Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --s-1:.875rem; --s0:1rem; --s1:1.25rem; --s2:1.6rem; --s3:2.2rem; --s4:3.2rem;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#10181B; --paper-2:#152024; --card:#18252A; --ink:#E3E9E3; --muted:#A3B1AC; --line:#2F3F42;
+    --indigo:#9DB4DE; --tea:#A9BE6E; --seal:#D0604F;
+    --hero-bg:#0F1A2B; --hero-fg:#EEF1EA; --hero-muted:#9EAEC2;
+    --ridge-1:#16243A; --ridge-2:#1C2E4A; --ridge-3:#0A1320;
+    --btn-bg:#EEF1EA; --btn-fg:#0F1A2B; --focus:#E0B456; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#10181B; --paper-2:#152024; --card:#18252A; --ink:#E3E9E3; --muted:#A3B1AC; --line:#2F3F42;
+  --indigo:#9DB4DE; --tea:#A9BE6E; --seal:#D0604F;
+  --hero-bg:#0F1A2B; --hero-fg:#EEF1EA; --hero-muted:#9EAEC2;
+  --ridge-1:#16243A; --ridge-2:#1C2E4A; --ridge-3:#0A1320;
+  --btn-bg:#EEF1EA; --btn-fg:#0F1A2B; --focus:#E0B456; color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:var(--s0);line-height:1.6}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.eyebrow{font-family:var(--f-mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--tea)}
+.han{font-family:var(--f-han)}
+section{padding-block:clamp(3.5rem,8vw,6rem)}
+.sec-head{display:grid;gap:.75rem;max-width:44rem;margin-bottom:2.5rem}
+.sec-head h2{font-size:clamp(1.9rem,4vw,var(--s4))}
+.sec-head h2 .han{display:block;font-size:.5em;font-weight:500;color:var(--muted);margin-top:.5rem;letter-spacing:.08em}
+.sec-head p{color:var(--muted);max-width:62ch}
+
+/* ---------- Hero ---------- */
+.hero{background:var(--hero-bg);color:var(--hero-fg);position:relative;overflow:hidden}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.25rem;position:relative;z-index:2;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+.brand b{font-family:var(--f-han);font-weight:700;font-size:1.15rem;letter-spacing:.06em}
+.brand span{font-family:var(--f-mono);font-size:.75rem;color:var(--hero-muted);letter-spacing:.08em}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1.4rem;flex-wrap:wrap}
+.nav ul a{text-decoration:none;font-size:.92rem;color:var(--hero-muted)}
+.nav ul a:hover{color:var(--hero-fg)}
+.hero-body{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;padding-block:3rem 11rem}
+.hero-copy{min-width:0;display:grid;gap:1.4rem;max-width:40rem}
+.hero h1{font-size:clamp(2.8rem,7.5vw,5.6rem);letter-spacing:-.01em}
+.hero .zh-line{font-family:var(--f-han);font-size:clamp(1.15rem,2.2vw,1.45rem);font-weight:500;letter-spacing:.06em;line-height:1.7}
+.hero .en-line{color:var(--hero-muted);font-size:1.05rem;max-width:52ch}
+.cta-row{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:.4rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1.25rem;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1.5px solid transparent;cursor:pointer;font-family:var(--f-body)}
+.btn-solid{background:var(--btn-bg);color:var(--btn-fg)}
+.btn-ghost{border-color:color-mix(in srgb, var(--hero-fg) 45%, transparent);color:var(--hero-fg)}
+.btn-ghost:hover{border-color:var(--hero-fg)}
+.vertical{writing-mode:vertical-rl;font-family:var(--f-han);font-weight:900;font-size:clamp(4.5rem,11vw,9rem);line-height:1;letter-spacing:.12em;display:flex;align-items:flex-start;gap:.3em;user-select:none}
+.seal{writing-mode:horizontal-tb;font-family:var(--f-display);font-weight:400;font-size:.95rem;letter-spacing:.02em;background:var(--seal);color:#FBF6F0;width:3.1rem;height:3.1rem;display:grid;place-items:center;border-radius:6px;transform:rotate(-4deg);margin-top:.4rem}
+.ridges{position:absolute;left:0;right:0;bottom:-1px;width:100%;height:auto;z-index:1;display:block}
+.hero-meta{position:absolute;z-index:2;bottom:1.1rem;left:0;right:0}
+.hero-meta .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-family:var(--f-mono);font-size:.74rem;color:var(--hero-muted);letter-spacing:.06em}
+
+/* ---------- Two doors ---------- */
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem}
+.door{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:2rem;display:grid;gap:1rem;align-content:start}
+.door h3{font-size:var(--s3)}
+.door .han{color:var(--muted);font-size:1rem;letter-spacing:.06em}
+.door ul{margin:0;padding-left:1.1rem;display:grid;gap:.35rem;color:var(--muted)}
+.door a.more{font-weight:600;color:var(--indigo);text-decoration:none;margin-top:.4rem}
+.door a.more:hover{text-decoration:underline}
+.door .who{font-family:var(--f-mono);font-size:.78rem;color:var(--tea);letter-spacing:.06em}
+
+/* ---------- Trail of themes ---------- */
+.trail-sec{background:var(--paper-2)}
+.trail{position:relative;display:grid;gap:2.2rem;padding-left:3rem}
+.trail::before{content:"";position:absolute;left:.8rem;top:.6rem;bottom:.6rem;border-left:2px dashed var(--line)}
+.stop{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:1.5rem 2.5rem;align-items:start}
+.stop::before{content:"";position:absolute;left:-2.68rem;top:.45rem;width:1.05rem;height:1.05rem;border-radius:50%;background:var(--paper-2);border:3px solid var(--tea)}
+.stop-title{display:grid;gap:.35rem;min-width:0}
+.stop-title .han{font-size:2.4rem;font-weight:700;line-height:1;color:var(--indigo)}
+.stop-title h3{font-size:var(--s2)}
+.stop-title .where{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);letter-spacing:.04em}
+.stop-body{display:grid;gap:.8rem;min-width:0}
+.stop-body p{color:var(--ink)}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{font-size:.78rem;padding:.2rem .65rem;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--card)}
+.tag.students{border-color:var(--tea);color:var(--tea)}
+
+/* ---------- Sample journey ---------- */
+.journey{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:3rem;align-items:start}
+.journey-intro{display:grid;gap:1rem;position:sticky;top:calc(env(safe-area-inset-top, 0px) + 1.5rem)}
+.journey-intro p{color:var(--muted)}
+.note{font-family:var(--f-mono);font-size:.76rem;color:var(--muted);border:1px dashed var(--line);border-radius:8px;padding:.6rem .8rem}
+.days{list-style:none;margin:0;padding:0;display:grid}
+.day{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:1.25rem;padding-block:1.3rem;border-top:1px solid var(--line)}
+.day:last-child{border-bottom:1px solid var(--line)}
+.day-n{font-family:var(--f-mono);font-size:.8rem;color:var(--tea);letter-spacing:.06em;padding-top:.3rem}
+.day h3{font-size:1.3rem;margin-bottom:.35rem}
+.day p{color:var(--muted)}
+
+/* ---------- Schools ---------- */
+.schools{background:var(--indigo);color:var(--paper)}
+.schools .eyebrow{color:color-mix(in srgb, var(--paper) 75%, transparent)}
+.schools .sec-head p,.schools .sec-head h2 .han{color:color-mix(in srgb, var(--paper) 78%, transparent)}
+.school-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.school-col{border-top:2px solid color-mix(in srgb, var(--paper) 40%, transparent);padding-top:1.1rem;display:grid;gap:.7rem;align-content:start}
+.school-col h3{font-size:1.35rem}
+.school-col ul{margin:0;padding-left:1.1rem;display:grid;gap:.35rem;color:color-mix(in srgb, var(--paper) 85%, transparent)}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:3rem;align-items:center}
+.portrait{aspect-ratio:4/5;max-width:100%;border-radius:14px;border:1.5px dashed var(--line);background:var(--card);display:grid;place-items:center;text-align:center;padding:1.5rem;color:var(--muted);font-family:var(--f-mono);font-size:.8rem}
+.portrait .han{font-size:3.5rem;font-weight:900;color:var(--indigo);display:block;margin-bottom:.6rem;font-family:var(--f-han)}
+.about-copy{display:grid;gap:1rem}
+.about-copy h2{font-size:clamp(1.9rem,4vw,var(--s4))}
+.about-copy p{max-width:62ch}
+.placeholder{background:color-mix(in srgb, var(--tea) 14%, transparent);border-radius:4px;padding:0 .25em}
+.lang{display:flex;gap:.5rem;flex-wrap:wrap}
+
+/* ---------- Steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;gap:.5rem;align-content:start;padding:1.4rem;border:1px solid var(--line);border-radius:14px;background:var(--card)}
+.steps li::before{content:counter(s);font-family:var(--f-display);font-size:2rem;color:var(--tea);line-height:1}
+.steps h3{font-size:1.25rem}
+.steps p{color:var(--muted)}
+
+/* ---------- Form ---------- */
+.plan{background:var(--paper-2)}
+.plan-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:3rem;align-items:start}
+.plan-grid aside{display:grid;gap:1rem}
+.plan-grid aside p{color:var(--muted)}
+.contact{font-family:var(--f-mono);font-size:.9rem;user-select:all}
+form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.75rem}
+.field{display:grid;gap:.35rem;min-width:0}
+.field.full{grid-column:1/-1}
+label,legend{font-size:.85rem;font-weight:600}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:.65rem .75rem;width:100%}
+textarea{min-height:7rem;resize:vertical}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:.5rem}
+.checks{display:flex;flex-wrap:wrap;gap:.5rem}
+.checks label{font-weight:500;display:flex;align-items:center;gap:.4rem;border:1px solid var(--line);border-radius:999px;padding:.35rem .8rem;cursor:pointer;background:var(--paper)}
+.checks input{width:auto;accent-color:var(--tea)}
+.submit{background:var(--indigo);color:var(--paper);border:0;justify-self:start}
+.status{grid-column:1/-1;font-size:.9rem;color:var(--tea);min-height:1.4em}
+
+footer{padding-block:2.5rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.85rem;color:var(--muted)}
+footer .han{font-weight:700;color:var(--ink)}
+
+@media (max-width:860px){
+  .doors,.journey,.about,.plan-grid{grid-template-columns:1fr}
+  .school-grid,.steps{grid-template-columns:1fr}
+  .stop{grid-template-columns:1fr;gap:.8rem}
+  .journey-intro{position:static}
+}
+@media (max-width:600px){
+  .hero-body{grid-template-columns:1fr;padding-block:1.5rem 8rem}
+  .vertical{writing-mode:horizontal-tb;font-size:3.6rem;order:-1;align-items:center}
+  .nav ul{gap:1rem}
+  form{grid-template-columns:1fr;padding:1.25rem}
+  .door{padding:1.4rem}
+  .trail{padding-left:2.2rem}
+  .trail::before{left:.45rem}
+  .stop::before{left:-2.15rem}
+  .day{grid-template-columns:1fr;gap:.3rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  .btn,.door a.more{transition:background-color .2s, border-color .2s, color .2s}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap nav">
+    <a class="brand" href="#top" id="top"><b>Jady 帶路</b><span>TAIWAN WITH JADY</span></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#themes">Journeys</a></li>
+        <li><a href="#schools">Schools</a></li>
+        <li><a href="#about">About Jady</a></li>
+        <li><a href="#plan">Plan a trip</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="wrap hero-body">
+    <div class="hero-copy">
+      <p class="eyebrow" style="color:var(--hero-muted)">Private journeys &amp; school programs in Taiwan</p>
+      <h1>Taiwan with Jady</h1>
+      <p class="zh-line">走進街巷與山林，探索文化與自然，<br>讓故事跨越語言。</p>
+      <p class="en-line">Discover Taiwan’s culture and natural beauty through stories that connect us across languages.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#plan">Plan a private journey</a>
+        <a class="btn btn-ghost" href="#schools">For schools &amp; educators</a>
+      </div>
+    </div>
+    <div class="vertical" aria-hidden="true">帶路<span class="seal">Jady</span></div>
+  </div>
+
+  <svg class="ridges" viewBox="0 0 1440 260" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="var(--ridge-1)" d="M0 150 L120 110 L210 135 L330 70 L450 120 L560 90 L690 40 L820 105 L930 80 L1060 120 L1180 60 L1300 110 L1440 85 L1440 260 L0 260Z"/>
+    <path fill="var(--ridge-2)" d="M0 190 L150 150 L260 175 L400 130 L520 170 L660 140 L780 180 L900 135 L1030 170 L1160 140 L1300 175 L1440 150 L1440 260 L0 260Z"/>
+    <path fill="var(--ridge-3)" d="M0 230 L180 205 L360 225 L540 200 L720 228 L900 205 L1080 226 L1260 208 L1440 222 L1440 260 L0 260Z"/>
+  </svg>
+  <div class="hero-meta">
+    <div class="wrap"><span>From city lanes, 0 m</span><span>to high-mountain tea gardens, 1,000 m +</span></div>
+  </div>
+</header>
+
+<main>
+  <!-- Two doors -->
+  <section id="doors">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Two ways to travel</p>
+        <h2>Who I guide<span class="han">兩種旅程</span></h2>
+      </div>
+      <div class="doors">
+        <article class="door">
+          <p class="who">FOR TRAVELERS FROM NORTH AMERICA, EUROPE &amp; AUSTRALIA</p>
+          <h3>Private Journeys</h3>
+          <p class="han">私人深度旅程</p>
+          <p>Unhurried, fully private trips for couples, families and small groups. I plan every day around what you care about, then walk it with you.</p>
+          <ul>
+            <li>Private guiding in English, start to finish</li>
+            <li>Time with tea makers, cooks, artisans and Indigenous hosts</li>
+            <li>Hand-picked hotels, from city landmarks to mountain lodges</li>
+            <li>4 to 14 days. Pricing on request.</li>
+          </ul>
+          <a class="more" href="#plan">Start planning →</a>
+        </article>
+        <article class="door">
+          <p class="who">FOR ENGLISH-SPEAKING SCHOOLS &amp; UNIVERSITIES</p>
+          <h3>Schools &amp; Educators</h3>
+          <p class="han">學生教育旅程</p>
+          <p>Study trips built around clear learning goals, for high schools, international schools and faculty-led university programs.</p>
+          <ul>
+            <li>Mandarin, culture and field-study modules</li>
+            <li>Exchanges with Taiwanese schools</li>
+            <li>Pre-trip and post-trip learning materials</li>
+            <li>Safety planning shared with teachers and parents</li>
+          </ul>
+          <a class="more" href="#schools">See school programs →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Themes trail -->
+  <section class="trail-sec" id="themes">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The route</p>
+        <h2>Five ways into Taiwan<span class="han">五條認識台灣的路</span></h2>
+        <p>Each journey follows one or more of these themes. Mix them freely: a tea morning in the mountains, an afternoon at a potter’s wheel, dinner at a chef’s counter.</p>
+      </div>
+
+      <div class="trail">
+        <article class="stop">
+          <div class="stop-title">
+            <span class="han">茶</span>
+            <h3>Tea culture</h3>
+            <span class="where">ALISHAN · PINGLIN · HIGH-MOUNTAIN OOLONG</span>
+          </div>
+          <div class="stop-body">
+            <p>Walk misty tea gardens above 1,000 metres, learn how oolong is withered, rolled and roasted, and sit for a slow tasting with a tea master who has worked the same slopes for decades.</p>
+            <div class="tags"><span class="tag">Garden walk</span><span class="tag">Roasting workshop</span><span class="tag">Tea ceremony</span></div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <div class="stop-title">
+            <span class="han">山</span>
+            <h3>Indigenous culture &amp; nature</h3>
+            <span class="where">HUALIEN · TAITUNG · TAROKO GORGE</span>
+          </div>
+          <div class="stop-body">
+            <p>Hike marble canyons on Taiwan’s east coast, then spend time in Indigenous communities whose hosts share food, weaving, song and the stories that tie them to the land.</p>
+            <div class="tags"><span class="tag">Gorge hikes</span><span class="tag">Village homestay</span><span class="tag">Hunter’s trail</span></div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <div class="stop-title">
+            <span class="han">食</span>
+            <h3>Food &amp; the chef’s table</h3>
+            <span class="where">TAIPEI · TAINAN · MORNING MARKETS</span>
+          </div>
+          <div class="stop-body">
+            <p>Start at a morning market, cook with a local chef, and finish at a chef’s counter where Taiwanese ingredients meet fine dining. Tainan’s old-city snacks are a day of their own.</p>
+            <div class="tags"><span class="tag">Market walk</span><span class="tag">Cooking class</span><span class="tag">Chef’s counter</span></div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <div class="stop-title">
+            <span class="han">藝</span>
+            <h3>Craft &amp; design</h3>
+            <span class="where">YINGGE CERAMICS · SANXIA INDIGO · TAIPEI ARCHITECTURE</span>
+          </div>
+          <div class="stop-body">
+            <p>Throw clay in Yingge, Taiwan’s ceramics town, dye cloth in Sanxia indigo, and read Taipei through its buildings, from Japanese-era shophouses to new design landmarks.</p>
+            <div class="tags"><span class="tag">Pottery studio</span><span class="tag">Indigo dyeing</span><span class="tag">Architecture walk</span></div>
+          </div>
+        </article>
+
+        <article class="stop">
+          <div class="stop-title">
+            <span class="han">語</span>
+            <h3>Mandarin immersion</h3>
+            <span class="where">TAIPEI · FOR STUDENT GROUPS</span>
+          </div>
+          <div class="stop-body">
+            <p>Morning Mandarin classes followed by afternoon missions in the city: ordering at a night market, asking for directions, interviewing shopkeepers. Students use the language the same day they learn it.</p>
+            <div class="tags"><span class="tag students">Students</span><span class="tag">Classroom + city missions</span><span class="tag">School exchange</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample journey -->
+  <section id="journey">
+    <div class="wrap journey">
+      <div class="journey-intro">
+        <p class="eyebrow">Sample private journey</p>
+        <h2 style="font-size:clamp(1.9rem,4vw,var(--s4))">Lanes to Mountains, 6 days</h2>
+        <p>One example of how the themes fit together. Every journey is planned from scratch around your dates, pace and interests.</p>
+        <p class="note">SAMPLE ITINERARY · ADJUSTED FOR EACH TRAVELER</p>
+      </div>
+      <ol class="days">
+        <li class="day"><span class="day-n">DAY 1</span><div><h3>Arrive in Taipei</h3><p>Airport pick-up, check in, and an evening walk through Dadaocheng’s old tea merchant lanes.</p></div></li>
+        <li class="day"><span class="day-n">DAY 2</span><div><h3>Markets and a chef’s table</h3><p>Morning market with a local cook, hands-on lunch, and dinner at a chef’s counter.</p></div></li>
+        <li class="day"><span class="day-n">DAY 3</span><div><h3>Clay and indigo</h3><p>A pottery session in Yingge, then indigo dyeing in Sanxia’s old street.</p></div></li>
+        <li class="day"><span class="day-n">DAY 4</span><div><h3>East coast to Taroko</h3><p>Train down the Pacific coast to Hualien and an afternoon walk into Taroko Gorge.</p></div></li>
+        <li class="day"><span class="day-n">DAY 5</span><div><h3>With Indigenous hosts</h3><p>A day in an Indigenous community: shared meal, weaving, and stories from the elders.</p></div></li>
+        <li class="day"><span class="day-n">DAY 6</span><div><h3>Tea, then home</h3><p>Pinglin tea gardens and a final tasting with a tea master before your flight.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Schools -->
+  <section class="schools" id="schools">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Schools &amp; educators</p>
+        <h2>Study trips with clear learning goals<span class="han">有學習目標的教育旅程</span></h2>
+        <p>Programs for English-speaking high schools, international schools and faculty-led university courses. Every program starts from what your students need to learn.</p>
+      </div>
+      <div class="school-grid">
+        <div class="school-col">
+          <h3>Learning</h3>
+          <ul>
+            <li>Mandarin and culture modules</li>
+            <li>Field study: sustainability, Indigenous studies, design</li>
+            <li>Can support IB CAS, AP Chinese and university credit</li>
+            <li>Pre-trip and post-trip worksheets</li>
+          </ul>
+        </div>
+        <div class="school-col">
+          <h3>Exchange</h3>
+          <ul>
+            <li>Classes and activities with Taiwanese schools</li>
+            <li>Student buddy pairing for a day in the city</li>
+            <li>Shared projects that continue online after the trip</li>
+          </ul>
+        </div>
+        <div class="school-col">
+          <h3>Safety</h3>
+          <ul>
+            <li>Written risk assessment for every program</li>
+            <li>Emergency contact reachable around the clock</li>
+            <li>Travel insurance and licensed tour guides</li>
+            <li>Allergy and dietary needs planned in advance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="wrap about">
+      <div class="portrait"><div><span class="han">帶路</span>Portrait photo of Jady<br>on a mountain trail or in a tea garden</div></div>
+      <div class="about-copy">
+        <p class="eyebrow">About Jady</p>
+        <h2>Hi, I’m Jady.</h2>
+        <p><span class="placeholder">[Draft, please rewrite:]</span> I grew up in Taiwan, and I love showing people the places that don’t make it into guidebooks: the alley where my favourite breakfast is made, the tea farmer who taught me to taste, the trail where the clouds sit below you.</p>
+        <p><span class="placeholder">[Add your story: where you are from, how you started guiding, your licenses and training, and why you love sharing Taiwan.]</span></p>
+        <div class="lang"><span class="tag">English</span><span class="tag">中文</span><span class="tag placeholder">[other languages]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>From first message to the trail<span class="han">從第一封信，到一起上路</span></h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Tell me about you</h3><p>Send a short note with your dates, group and interests. For schools, include your learning goals.</p></li>
+        <li><h3>I design the trip</h3><p>We talk on a video call, then I send a day-by-day plan and quote. We refine it together.</p></li>
+        <li><h3>We walk it together</h3><p>I guide you on the ground and stay in touch from arrival to departure.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Plan form -->
+  <section class="plan" id="plan">
+    <div class="wrap plan-grid">
+      <aside>
+        <p class="eyebrow">Plan a trip</p>
+        <h2 style="font-size:clamp(1.9rem,4vw,var(--s4))">Let’s start with a conversation</h2>
+        <p>Tell me a little about your trip. I reply within two working days, Taiwan time (GMT+8).</p>
+        <p class="contact">hello@taiwanwithjady.com</p>
+      </aside>
+      <form id="inquiry" novalidate>
+        <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="f-type">Trip type</label>
+          <select id="f-type" name="type"><option>Private journey</option><option>School or university group</option><option>Not sure yet</option></select></div>
+        <div class="field"><label for="f-size">Group size</label><input id="f-size" name="size" type="number" min="1" placeholder="e.g. 2 or 24"></div>
+        <div class="field full"><label for="f-when">When would you like to travel?</label><input id="f-when" name="when" placeholder="e.g. April 2027, about 7 days"></div>
+        <fieldset class="field full">
+          <legend>Interests</legend>
+          <div class="checks">
+            <label><input type="checkbox" id="i-tea" name="i" value="tea"> Tea</label>
+            <label><input type="checkbox" id="i-ind" name="i" value="indigenous"> Indigenous culture &amp; nature</label>
+            <label><input type="checkbox" id="i-food" name="i" value="food"> Food</label>
+            <label><input type="checkbox" id="i-craft" name="i" value="craft"> Craft &amp; design</label>
+            <label><input type="checkbox" id="i-mandarin" name="i" value="mandarin"> Mandarin</label>
+          </div>
+        </fieldset>
+        <div class="field full"><label for="f-msg">Anything else?</label><textarea id="f-msg" name="message" placeholder="Pace, hotels, dietary needs, learning goals..."></textarea></div>
+        <button class="btn submit" type="submit">Send inquiry</button>
+        <p class="status" id="status" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><span class="han">Jady 帶路</span> · Taiwan with Jady</span>
+    <span>Travel agency license no. [to be added]</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('inquiry').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var name = document.getElementById('f-name');
+  var email = document.getElementById('f-email');
+  var status = document.getElementById('status');
+  if (!name.value.trim() || !email.value.trim() || !email.checkValidity()) {
+    status.textContent = 'Please add your name and a valid email address.';
+    (name.value.trim() ? email : name).focus();
+    return;
+  }
+  status.textContent = 'Prototype only: this form is not connected yet, so nothing was sent.';
+});
+</script>
+</body>
+</html>
