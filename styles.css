@@ -235,10 +235,6 @@ label .en-sub,legend .en-sub{display:inline;margin-left:.3rem;font-weight:400}
 .gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem}
 .gallery .photo img{aspect-ratio:4/5}
 .gallery .photo.wide img{aspect-ratio:auto;height:100%;min-height:100%}
-.recog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1.5rem}
-.recog-grid a{text-decoration:none;color:inherit;display:block}
-.recog-grid img{aspect-ratio:4/3;border:1px solid var(--line)}
-.recog-grid figcaption b{display:block;color:var(--ink);font-weight:600;font-size:.92rem}
 .credentials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem;margin-top:.5rem}
 .credentials img{aspect-ratio:3/4;object-fit:cover;border:1px solid var(--line)}
 @media (max-width:860px){
