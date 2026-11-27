@@ -206,3 +206,17 @@ html[lang="zh-Hant"] h1,html[lang="zh-Hant"] h2,html[lang="zh-Hant"] h3{font-wei
 html[lang="zh-Hant"] .hero h1{font-size:clamp(2.4rem,6.5vw,4.6rem)}
 html[lang="zh-Hant"] .sec-head h2 .en{display:block;font-family:"Young Serif",Georgia,serif;font-weight:400;font-size:.5em;color:var(--muted);margin-top:.5rem;letter-spacing:0}
 html[lang="zh-Hant"] .eyebrow{letter-spacing:.16em}
+
+/* ---------- Bilingual page: Chinese first, English beneath ---------- */
+:root{--f-en:"Figtree","Helvetica Neue",Arial,sans-serif}
+html[lang="zh-Hant"] [lang="en"]{font-family:var(--f-en);letter-spacing:0}
+html[lang="zh-Hant"] h1 [lang="en"],html[lang="zh-Hant"] h2 [lang="en"],html[lang="zh-Hant"] h3 [lang="en"]{font-family:"Young Serif",Georgia,serif;font-weight:400}
+.en-p{font-size:.95em;line-height:1.6;color:var(--muted)}
+.en-sub{display:block;font-size:.88em;line-height:1.5;color:var(--muted);margin-top:.1rem}
+.nav ul .en-sub{display:inline;margin-left:.3rem;font-size:.78em;opacity:.75;color:inherit}
+.door h3 .en-sub,.stop-title h3 .en-sub,.day h3 .en-sub,.school-col h3 .en-sub,.steps h3 .en-sub{font-size:.62em;margin-top:.3rem}
+.btn .en-sub{display:inline;font-size:.85em;margin:0;color:inherit;opacity:.75}
+.tag .en-sub{display:inline;margin-left:.25rem;font-size:.92em;color:inherit;opacity:.8}
+label .en-sub,legend .en-sub{display:inline;margin-left:.3rem;font-weight:400}
+.schools .en-p,.schools .en-sub{color:color-mix(in srgb, var(--paper) 72%, transparent)}
+.hero .en-sub{color:var(--hero-muted)}
